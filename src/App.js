@@ -1,22 +1,16 @@
 import './App.css';
 
 function App() {
+  var dataSet = [];
+
+
+//TO DO https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <container className="chartcontainer">
+          <div id="title">United States GDP</div>
+        </container>
+      </div>
   );
 }
 
