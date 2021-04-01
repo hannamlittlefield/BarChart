@@ -7,6 +7,7 @@ export default function BarChart(){
 
     var svgWidth = 500;
     var svgHeight = 500;
+
     React.useEffect(() => { 
         d3.json("/chart-data.json").then((d) => { 
             setData(d); 
@@ -20,6 +21,8 @@ export default function BarChart(){
             .attr("width", svgWidth)
             .attr("height", svgHeight);
         
+        //adding tooltip
+         //   .append("tooltip")
 
 
     return(

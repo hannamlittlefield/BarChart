@@ -1,17 +1,14 @@
 import './App.css';
+import BarChart from './BarChart';
 
-function App() {
-  var dataSet = [];
 
+export default function App() {
 
 //TO DO https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json
   return (
     <div className="App">
-        <container className="chartcontainer">
           <div id="title">United States GDP</div>
-        </container>
+          <BarChart/>
       </div>
   );
 }
-
-export default App;
