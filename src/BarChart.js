@@ -15,23 +15,48 @@ export default function BarChart(){
         }); 
             return () => undefined; 
         }, []);
+        console.log(data) 
 
-        const svgElement = d3.select("div")
-            .append("svg")
-            .attr("width", svgWidth)
-            .attr("height", svgHeight);
+        //create svg element from div
+    const svgElement = d3.select("div")
+        .append("svg")
+        .attr("width", svgWidth)
+        .attr("height", svgHeight);
+
+        //create x axis - story 2
+    svgElement
+        .append("g")
+        .attr("id", "x-axis")
         
-        //adding tooltip
-         //   .append("tooltip")
+        //create y axis - story 3
+    svgElement
+        .append("g")
+        .attr("id", "y-axis")
 
+        //create bars from data - story 5
+    svgElement 
+        .selectAll("rect")
+        .data(data)
+        .enter()
+        .append("rect")
+
+        //create tooltip - story 12
+    svgElement
+        .select("svg")
+        .append("div")
+        .attr("id", "tooltip")
+        .append("text")
+        //.text("put function for text here for tooltip")
 
     return(
         <div id="chartContainer">
-            <g id="x-axis"></g>
-            <g id="y-axis"></g>
         </div>
 
 
     );
 
 }
+
+
+// create ref in return statement to reference to svg 
+// https://www.pluralsight.com/guides/drawing-charts-in-react-with-d3
