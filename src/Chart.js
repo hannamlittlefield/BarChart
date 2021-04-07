@@ -7,8 +7,8 @@ export  function drawChart(height, width){
         .attr("height", height)
         .style("border", "1px solid black")
         .append("text")
-        .attr("fill", "green")
+        .attr("fill", "white")
         .attr("x", 50)
         .attr("y", 50)
-        .text("Hello D3")
+
 }

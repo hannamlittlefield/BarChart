@@ -18,10 +18,13 @@ export default function BarChart(){
         console.log(data) 
 
         //create svg element from div
-    const svgElement = d3.select("div")
+    const svgElement = d3.select("chartcontainer")
         .append("svg")
         .attr("width", svgWidth)
-        .attr("height", svgHeight);
+        .attr("height", svgHeight)
+        .style("border", "1px yellow")
+        .append("text")
+        .attr("fill", "blue")
 
         //create x axis - story 2
     svgElement
