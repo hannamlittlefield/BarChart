@@ -4,12 +4,30 @@
     <!-- style and script resources -->
     <link rel="stylesheet" href="styles.css" media="all">
     <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="./App.js"></script>
     <!--meta properties -->
   </head>
   <body>
     <div id="chart"></div>
-    
+
     <link rel="stylesheet" type="text/css" href="/" media="print" />
     <script src="" async defer></script>
+    <script>
+        var svgContainer = d3
+      	  .select('#chart')
+          .append('svg')
+            .attr('width', 500)
+            .attr('height', 500)
+            .style('border', '1px solid black');
+
+          svgContainer
+            .append('g')
+            .attr('id', 'x-axis')
+
+          svgContainer
+            .append('y')
+            .attr('id', 'y-axis')
+          
+    </script>
   </body>
 </html>
